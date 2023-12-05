@@ -1,0 +1,9 @@
+---
+title: Distributional Semantics for Data Retrieval
+description: Distributional Semantics for data retrieval using CBOW, GloVe, and Skipgrams
+date: 2023-09-08
+published: true
+  
+---
+
+I implemented and trained a CBOW and Skipgram model to generate word embeddings over a vocab size of ~30k stemmed words. Then, I encoded the same dataset of over 900k documents 3 ways, using GloVe word embeddings and my CBOW/Skipgram embeddings. These 3 models were tested for information retrieval and search, with CBOW resulting in ~50% accuracy, Skipgram achieving ~83% accuracy, and GloVe maintaining around ~90% accuracy.
