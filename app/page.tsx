@@ -39,7 +39,7 @@ export default function Home() {
       <div className="my-16 text-center animate-fade-in">
         {/* <h2 className="text-lg text-zinc-500"> */}
         <h2 className="text-lg text-[#ffffff]">
-          Masters student specializing in Machine Learning and Computing Systems @ GT
+          Masters student specializing in Machine Learning and Computing Systems @ Georgia Tech
         </h2>
         <h2 className="text-lg text-[#ffffff]">
           Currently working as a Software Dev Engineer @ Amazon
