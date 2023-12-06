@@ -38,7 +38,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg duration-500 text-[#ffffff] hover:text-zinc-300"
+              className="text-lg duration-500 text-slate-300 hover:text-white"
             >
               {item.name}
             </Link>
@@ -55,19 +55,19 @@ export default function Home() {
       <div className="my-16 text-center animate-fade-in">
         {isMobile ? (
           <>
-            <h2 className="text-lg text-[#ffffff]">
+            <h2 className="text-lg text-slate-300">
               MS in ML & Computing @ Georgia Tech
             </h2>
-            <h2 className="text-lg text-[#ffffff]">
+            <h2 className="text-lg text-slate-300">
               SDE @ Amazon
             </h2>
           </>
         ) : (
           <>
-            <h2 className="text-lg text-[#ffffff]">
+            <h2 className="text-lg text-slate-300">
               Masters student specializing in Machine Learning and Computing Systems @ Georgia Tech
             </h2>
-            <h2 className="text-lg text-[#ffffff]">
+            <h2 className="text-lg text-slate-300">
               Currently working as a Software Dev Engineer @ Amazon
             </h2>
           </>
