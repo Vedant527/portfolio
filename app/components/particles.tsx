@@ -15,7 +15,7 @@ export default function Particles({
 	className = "",
 	quantity = 100,
 	staticity = 50,
-	ease = 100, // higher means less movement towards cursor
+	ease = 25, // higher means less movement towards cursor
 	refresh = false,
 }: ParticlesProps) {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -98,12 +98,12 @@ export default function Particles({
 		const y = Math.floor(Math.random() * canvasSize.current.h);
 		const translateX = 0;
 		const translateY = 0;
-		const size = Math.floor(Math.random() * 3.2) + 3;
+		const size = Math.floor(Math.random() * 3.8) + 3.5;
 		const alpha = 0;
 		const targetAlpha = parseFloat((Math.random() * 0.14 + 0.1).toFixed(1));
-		const dx = (Math.random() - 0.5) * 0.18;
-		const dy = (Math.random() - 0.5) * 0.18;
-		const magnetism = 0.1 + Math.random() * 4;
+		const dx = (Math.random() - 0.5) * .8;
+		const dy = (Math.random() - 0.5) * .8;
+		const magnetism = 0.1 + Math.random() * 8;
 		return {
 			x,
 			y,
