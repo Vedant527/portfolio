@@ -9,12 +9,15 @@
 
   .gradient-background {
     /* background-image: linear-gradient(to top right, #000000, #191860, #1300e6); */
-    /* background-image: linear-gradient(to bottom left, #0a0175, #100f3e, 85%, #000000); */
+    /* background-image: linear-gradient(to bottom left, #0a0175, #100f3e, 50%, #000000); */
     /* background-image: linear-gradient(to top right, #12100E, #2B4162); /* night shift */
+    /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
+    /* background-image: linear-gradient(to right, #272626 0%, black 100%); */
+    background-image: linear-gradient(to right, #000428, #004e92);
     /* background-image: linear-gradient(to top, #6b4984, #2B2F77, #131862, #141852, #070B34); /* night sky but too purple */
     /* background-image: linear-gradient(to right, #000000, #0c1445, #171b6e) */
     /* background-image: linear-gradient(to bottom, #000000, #033141); */
-    background-image: linear-gradient(to bottom, #000000, #0d0833);
+    /* background-image: linear-gradient(to bottom, #000000, #0d0833); */
     /* background-image: radial-gradient(#111111, #1500ff, #111111); */
   }
 } 
