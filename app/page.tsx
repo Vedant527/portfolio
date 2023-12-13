@@ -59,7 +59,7 @@ export default function Home() {
               MS in ML & Computing @ Georgia Tech
             </h2>
             <h2 className="text-lg text-slate-300">
-              Software Development Engineer
+              Software Dev Engineer
             </h2>
           </>
         ) : (
@@ -68,7 +68,7 @@ export default function Home() {
               Masters student specializing in Machine Learning and Computing Systems @ Georgia Tech
             </h2>
             <h2 className="text-lg text-slate-300">
-              Currently working as a Software Dev Engineer @ Amazon
+              Software Development Engineer
             </h2>
           </>
         )}
