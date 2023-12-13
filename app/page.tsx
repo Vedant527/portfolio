@@ -59,7 +59,7 @@ export default function Home() {
               MS in ML & Computing @ Georgia Tech
             </h2>
             <h2 className="text-lg text-slate-300">
-              SDE @ Amazon
+              Software Development Engineer
             </h2>
           </>
         ) : (
