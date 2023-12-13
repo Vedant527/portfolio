@@ -38,12 +38,8 @@ export default function Contact() {
 	}
 	
 	return (
-		<div className="bg-gradient-to-bl">
+		<div>
 			<Navigation />
-			{/* <Particles
-				className="absolute inset-0 -z-10"
-				quantity={100}
-			/> */}
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto justify-items-center">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s) => (
