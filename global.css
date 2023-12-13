@@ -11,8 +11,9 @@
 
     /* background-image: linear-gradient(to top right, #12100E, #2B4162); /* night shift */
 
-    background-image: linear-gradient(to right, #000428, #000407);
     /* background-image: linear-gradient(to right, #000428, #000407); */
+    /* background-image: linear-gradient(to right, #000428, #004e92); favorite page color */
+    background-image: linear-gradient(to right, #020521, #004e92);
 
     /* background-image: linear-gradient(to top, #6b4984, #2B2F77, #131862, #141852, #070B34); /* night sky but too purple */
   }
