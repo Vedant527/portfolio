@@ -30,6 +30,22 @@ const Hero = () => (
           className="w-1/2 h-1/2 object-cover rounded-[50px] z-10 relative"
         />
       </motion.div>
+
+      <motion.div
+      variants={slideIn('right', 'tween', .2, 1)}
+      className="flex items-center justify-center w-full"
+      >
+        <div className="text-center mt-8">
+            <a
+              href="/Official Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2 px-4 bg-blue-800 text-white rounded-full hover:bg-blue-700"
+            >
+              View Resume
+            </a>
+          </div>
+      </motion.div>
     </motion.div>
   </section>
 );

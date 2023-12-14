@@ -3,7 +3,9 @@
 import React, { useEffect } from "react";
 import { Navigation } from '../components/nav';
 import { About, Hero, Interests } from './sections';
-import '../../global.css'; // Import the CSS file for the progress bar
+import '../../global.css';
+import { Card } from '../components/card'; // Import your Card component
+import Link from 'next/link'; // Import Link from Next.js
 
 const AboutMe = () => {
   useEffect(() => {
@@ -12,7 +14,6 @@ const AboutMe = () => {
       const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollPercentage = (scrollTop / scrollHeight) * 100;
       
-      // Check if progressBar is not null before trying to access its properties
       const progressBar = document.getElementById('progress-bar');
       if (progressBar) {
         progressBar.style.width = scrollPercentage + '%';
@@ -38,7 +39,6 @@ const AboutMe = () => {
           <Interests />
         </div>
       </div>
-      {/* No need for an additional div, the progress bar is styled via the imported CSS */}
       <div id="progress-bar"></div>
     </div>
   );
