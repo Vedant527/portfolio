@@ -29,7 +29,7 @@ const Interests = () => {
                 <li>Natural Language Processing and Applications of LLMs</li>
                 <li>High Performance Computing</li>
                 <li>Computer Vision and Real-Time Image Segmentation</li>
-                <li aria-hidden="true">Low Level Programming and Parallelization</li>
+                <li aria-hidden="true">Low-Level Programming and Parallelization</li>
               </ul>
             </span>
           </div>
