@@ -18,6 +18,14 @@
     /* background-image: linear-gradient(to top, #6b4984, #2B2F77, #131862, #141852, #070B34); /* night sky but too purple */
   }
 
-
+  #progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px; /* Set the height of your progress bar */
+    background-color: #ffffff; /* Set the color of your progress bar */
+    transition: width 0.3s ease; /* Set the transition effect */
+  }
 } 
 

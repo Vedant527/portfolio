@@ -19,14 +19,14 @@ const About = () => (
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="text-2xl tracking-tight text-zinc-100 mb-4"
+        className="text-2xl tracking-tight text-zinc-400 mb-4"
       >
         <span> 
           My name is Vedant Bhat, and I am an aspiring Software Engineer interested in machine 
           learning and low-level, high performance Software Development. Currently, I am interested in various NLP topics including information retrieval and 
-          differential privacy. I am continuously honing my skills in programming languages such as Java, C++, and Python, and actively seeking opportunities to contribute to 
+          differential privacy. I am continuously improving my skills in programming languages such as Java, C++, and Python, and actively seeking opportunities to contribute to 
           projects that align with my interests. My goal is to leverage my passion for machine learning and low-level software development to create innovative solutions 
-          that solve complex problems. <br/><br/>
+          to complex, data and resource intensive problems. <br/><br/>
         </span>
         <span> 
           I am currently working towards my Masters at Georgia Tech with a dual specialization in 

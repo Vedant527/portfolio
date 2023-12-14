@@ -1,14 +1,13 @@
+'use client'
+
 import Link from "next/link";
 import React from "react";
+import { useEffect } from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import Particles from "../components/particles";
-// import { Redis } from "@upstash/redis";
-import { Eye } from "lucide-react";
-
-// const redis = Redis.fromEnv();
+import "../../global.css";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
@@ -33,14 +32,32 @@ export default async function ProjectsPage() {
         new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
         new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
     );
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+        
+        // Check if progressBar is not null before trying to access its properties
+        const progressBar = document.getElementById('progress-bar');
+        if (progressBar) {
+          progressBar.style.width = scrollPercentage + '%';
+        }
+      };
+  
+      // Attach the event listener when the component mounts
+      document.addEventListener('scroll', handleScroll);
+  
+      // Cleanup the event listener when the component unmounts
+      return () => {
+        document.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
   return (
 		<div className="relative pb-16">
       <Navigation />
-      {/* <Particles
-				className="absolute inset-0 -z-10"
-				quantity={10}
-			/> */}
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
@@ -50,7 +67,6 @@ export default async function ProjectsPage() {
             Here are some of my favorite projects i've worked on over the last few years. A handful are internship projects.
           </p>
         </div>
-        {/* <div className="w-full h-px bg-zinc-800" /> */}
         <div className="hidden w-full h-px md:block bg-zinc-400" />
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
@@ -137,6 +153,7 @@ export default async function ProjectsPage() {
           </div>
         </div>
       </div>
+      <div id="progress-bar"></div>
     </div>
   );
 }
