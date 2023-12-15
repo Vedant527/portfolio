@@ -11,18 +11,12 @@ const Interests = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if the window width is less than a certain threshold (e.g., 768px)
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    // Initial check on mount
     handleResize();
-
-    // Add event listener to check on window resize
     window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };

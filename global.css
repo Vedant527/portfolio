@@ -23,9 +23,9 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 4px; /* Set the height of your progress bar */
-    background-color: #ffffff; /* Set the color of your progress bar */
-    transition: width 0.3s ease; /* Set the transition effect */
+    height: 4px; 
+    background-color: #ffffff; 
+    transition: width 0.3s ease; 
   }
 } 
 
