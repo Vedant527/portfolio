@@ -61,7 +61,7 @@ const Interests = () => {
         </div>
       </motion.div>
     </motion.div>
-    <div id="progress-bar" style={{ width: '0%' }}></div>
+    <div id="progress-bar"></div>
   </section>
   );
 };
