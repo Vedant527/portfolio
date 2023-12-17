@@ -1,8 +1,5 @@
-'use client'
-
 import Link from "next/link";
 import React from "react";
-import { useEffect } from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -32,28 +29,6 @@ export default async function ProjectsPage() {
         new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
         new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
     );
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollTop = document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercentage = (scrollTop / scrollHeight) * 100;
-        
-        // Check if progressBar is not null before trying to access its properties
-        const progressBar = document.getElementById('progress-bar');
-        if (progressBar) {
-          progressBar.style.width = scrollPercentage + '%';
-        }
-      };
-  
-      // Attach the event listener when the component mounts
-      document.addEventListener('scroll', handleScroll);
-  
-      // Cleanup the event listener when the component unmounts
-      return () => {
-        document.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
 
   return (
 		<div className="relative pb-16">
