@@ -13,18 +13,11 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if the window width is less than a certain threshold (e.g., 768px)
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
-    // Initial check on mount
     handleResize();
-
-    // Add event listener to check on window resize
     window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -32,6 +25,7 @@ export default function Home() {
 
   return (
     <div className="relative pb-16 flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
