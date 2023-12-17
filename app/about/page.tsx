@@ -33,7 +33,7 @@ const AboutMe = () => {
     <div>
       <div id="progress-bar"></div>
       <div className="container flex items-center justify-center min-h-screen px-4 mx-auto justify-items-center">
-        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-1 lg:gap-8 overflow-x-hidden">
+        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-1 lg:gap-8">
           <Navigation />
           <Hero />
           <About />
