@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     default: "vedantbhat.co",
     template: "%s | vedantbhat.co",
   },
-  description: "Masters Computer Science student specializing in Machine Learning and Computing Systems",
+  description: "Vedant Bhat's Portfolio",
   openGraph: {
     title: "vedantbhat.co",
     description:
-      "Masters Computer Science Student specializing in Machine Learning and Computing Systems",
+      "Vedant Bhat's Portfolio",
     url: "https://vedantbhat.co",
     siteName: "vedantbhat.co",
     locale: "en-US",
@@ -55,8 +55,7 @@ export default function RootLayout({
         <Analytics />
       </head> */}
       <body
-        // className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined}`}
-        className={`gradient-background`}
+        className={`gradient-background ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined}`}
       >
         {children}
       </body>
