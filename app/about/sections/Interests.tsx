@@ -41,11 +41,11 @@ const Interests = () => {
             <span className="text-zinc-400 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
               { !isMobile ? 
                 (<ul className="block animate-text-slide text-left leading-tight [&_li]:block">
-                  <li>Low-Level Programming and Parallelization</li>
                   <li>Natural Language Processing and Applications of LLMs</li>
+                  <li>Computer Vision</li>
                   <li>High Performance Computing</li>
-                  <li>Computer Vision and Real-Time Image Segmentation</li>
-                  <li aria-hidden="true">Low-Level Programming and Parallelization</li>
+                  <li>Low-Level Programming and Parallelization</li>
+                  <li aria-hidden="true">Natural Language Processing and Applications of LLMs</li>
                 </ul> )
                 :
                 (<ul className="block animate-text-slide text-left leading-tight [&_li]:block">
