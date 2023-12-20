@@ -49,11 +49,11 @@ const Interests = () => {
                 </ul> )
                 :
                 (<ul className="block animate-text-slide text-left leading-tight [&_li]:block">
-                <li>Parallelization</li>
                 <li>NLP</li>
                 <li>HPC</li>
+                <li>Parallelization</li>
                 <li>Computer Vision</li>
-                <li aria-hidden="true">Parallelization</li>
+                <li aria-hidden="true">NLP</li>
               </ul> )
               }
             </span>
