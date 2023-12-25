@@ -19,7 +19,7 @@ Stack: Next.js, Tailwind.css, HTML
 2. Run the following commands to install dependencies
  
    ```bash
-   cd vedantbhat.co && npm install
+   cd portfolio && npm install
 
 3. Deploy the application to localhost
  
