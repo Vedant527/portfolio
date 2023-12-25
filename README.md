@@ -7,6 +7,7 @@ DNS: Porkbun
 Hosting: Vercel
 
 Stack: Next.js, Tailwind.css, HTML
+</div>
 
 ## How to Use
 
