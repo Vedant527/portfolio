@@ -30,11 +30,10 @@ const About = () => (
         </span>
         <span> 
           I am currently working towards my Masters at Georgia Tech with a dual specialization in 
-          Machine Learning and Computing Systems. This involves taking courses like Advanced Operating Systems, High Performance Computing, Computer Vision, and Scientific 
-          Machine Learning, amongst others. This unique combination of knowledge equips me with a multifaceted skill set that is crucial for developing high-performance machine 
-          learning systems. In terms of work experience, I have spent the past three summers working various SWE internships at Amazon, IBM, and Fiserv. Check out my LinkedIn for more details on those. <br/><br/>
+          Machine Learning and Computing Systems. This involves taking courses like Operating Systems, High Performance Computing, Computer Vision, and Scientific 
+          Machine Learning, amongst others. This unique combination of knowledge equips me with a multifaceted skill set that is crucial for developing high-performance systems. In terms of work experience, I have spent the past three summers working various SWE internships at Amazon, IBM, and Fiserv. Check out my LinkedIn for more details on those. <br/><br/>
         </span>
-        <span> Currently, I am based in Atlanta, GA. I enjoy playing basketball at Georgia Tech's Campus Rec Center, and I love trying new food (which has been especially enjoyable
+        <span> Currently, I am based in Atlanta, GA. I enjoy playing basketball and working out at Georgia Tech's Campus Rec Center, and I love trying new food (which has been especially enjoyable
           since Atlanta just received a Michelin Guide). Feel free to reach out via email or LinkedIn if you are looking to discuss a project, job, or just want to chat. 
         </span>
       </motion.p>
