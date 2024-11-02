@@ -1,4 +1,5 @@
 "use client";
+import styles from "../about/styles";
 import { Navigation } from "../components/nav";
 
 
@@ -6,9 +7,11 @@ export default function Blog() {
     return (
         <div>
             <Navigation/>
-            <div className="container flex items-center justify-center min-h-screen px-4 mx-auto justify-items-center">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
-
+            <div className={`${styles.yPaddings} relative z-10`}>
+                <div className="flex items-center justify-center min-h-[60vh]">
+                    <h2 className="font-bold lg:text-[48px] md:text-[36px] sm:text-[28px] text-[24px] uppercase text-zinc-800 dark:text-zinc-200">
+                        Coming Soon
+                    </h2>
                 </div>
             </div>
         </div>
