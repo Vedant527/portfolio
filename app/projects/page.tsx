@@ -13,9 +13,9 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "solar-flare")!;
+  const featured = allProjects.find((project) => project.slug === "collective-algos")!;
   const top2 = allProjects.find((project) => project.slug === "kvmnet")!;
-  const top3 = allProjects.find((project) => project.slug === "picturebook-ai")!;
+  const top3 = allProjects.find((project) => project.slug === "solar-flare")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
