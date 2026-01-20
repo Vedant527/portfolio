@@ -31,38 +31,38 @@ const Interests = () => {
         className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
       >
 
-      <motion.div
-        variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="text-2xl tracking-tight text-zinc-100"
-      >
-        <div className="container flex flex-col items-center justify-center min-h-screen px-4 mx-auto justify-items-center">
-          <div className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl md:gap-4 md:py-4 lg:pb-4 md:p-4 m-4">
-            Topics I am interested in:
-            <span className="text-zinc-400 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-              { !isMobile ? 
-                (<ul className="block animate-text-slide text-left leading-tight [&_li]:block">
-                  <li>Natural Language Processing and Applications of LLMs</li>
-                  <li>Computer Vision</li>
-                  <li>High Performance Computing</li>
-                  <li>Low-Level Programming and Parallelization</li>
-                  <li aria-hidden="true">Natural Language Processing and Applications of LLMs</li>
-                </ul> )
-                :
-                (<ul className="block animate-text-slide text-left leading-tight [&_li]:block">
-                <li>NLP</li>
-                <li>HPC</li>
-                <li>Parallelization</li>
-                <li>Computer Vision</li>
-                <li aria-hidden="true">NLP</li>
-              </ul> )
-              }
-            </span>
+        <motion.div
+          variants={fadeIn('up', 'tween', 0.2, 1)}
+          className="text-2xl tracking-tight text-zinc-100"
+        >
+          <div className="container flex flex-col items-center justify-center px-4 mx-auto justify-items-center py-20">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl mb-8 text-center">
+              Topics I am interested in
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
+              {[
+                "Natural Language Processing",
+                "Large Language Models",
+                "Computer Vision",
+                "High Performance Computing",
+                "Low-Level Programming",
+                "Parallelization",
+                "Distributed Systems",
+                "Information Retrieval"
+              ].map((interest, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-zinc-800/50 border border-zinc-700 rounded-full text-zinc-300 text-sm md:text-base hover:bg-zinc-700/50 hover:text-white transition-all cursor-default"
+                >
+                  {interest}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
-    <div id="progress-bar"></div>
-  </section>
+      <div id="progress-bar"></div>
+    </section>
   );
 };
 
