@@ -10,6 +10,15 @@ module.exports = {
 
 	theme: {
 		extend: {
+			colors: {
+				brand: {
+					dark: "#0B0F1A", // Deep blue-black
+					blue: "#3a86ff", // Vibrant blue
+					purple: "#8338ec", // Soft purple
+					"light-blue": "#a2d2ff",
+					"light-purple": "#c8b6ff",
+				},
+			},
 			typography: {
 				DEFAULT: {
 					css: {
@@ -103,22 +112,22 @@ module.exports = {
 					},
 				},
 				'text-slide': {
-                    '0%, 20%': {
-                        transform: 'translateY(0%)',
-                    },
-                    '25%, 45%': {
-                        transform: 'translateY(-20%)',
-                    },
-                    '50%, 70%': {
-                        transform: 'translateY(-40%)',
-                    },
-                    '75%, 95%': {
-                        transform: 'translateY(-60%)',
-                    },
-                    '100%': {
-                        transform: 'translateY(-80%)',
-                    },
-                },                    
+					'0%, 20%': {
+						transform: 'translateY(0%)',
+					},
+					'25%, 45%': {
+						transform: 'translateY(-20%)',
+					},
+					'50%, 70%': {
+						transform: 'translateY(-40%)',
+					},
+					'75%, 95%': {
+						transform: 'translateY(-60%)',
+					},
+					'100%': {
+						transform: 'translateY(-80%)',
+					},
+				},
 			},
 		},
 	},

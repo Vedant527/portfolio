@@ -20,29 +20,29 @@ export const Navigation: React.FC = () => {
 	return (
 		<header ref={ref}>
 			<div
-				className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  ${isIntersecting
-					? "bg-zinc-900/0 border-transparent"
-					: "bg-zinc-900/500  border-zinc-800 "
+				className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${isIntersecting
+					? "bg-transparent border-transparent"
+					: "bg-brand-dark/80 border-white/10"
 					}`}
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
 							href="/about"
-							className="duration-500 text-slate-300 hover:text-white"
+							className="duration-200 text-zinc-400 hover:text-brand-blue drop-shadow-none hover:drop-shadow-[0_0_8px_rgba(58,134,255,0.5)]"
 						>
 							about
 						</Link>
 						<Link
 							href="/projects"
-							className="duration-500 text-slate-300 hover:text-white"
+							className="duration-200 text-zinc-400 hover:text-brand-blue drop-shadow-none hover:drop-shadow-[0_0_8px_rgba(58,134,255,0.5)]"
 						>
 							projects
 						</Link>
 
 						<Link
 							href="/contact"
-							className="duration-500 text-slate-300 hover:text-white"
+							className="duration-200 text-zinc-400 hover:text-brand-blue drop-shadow-none hover:drop-shadow-[0_0_8px_rgba(58,134,255,0.5)]"
 						>
 							contact
 						</Link>
@@ -50,7 +50,7 @@ export const Navigation: React.FC = () => {
 
 					<Link
 						href="/"
-						className="duration-200 text-slate-300 hover:text-white"
+						className="duration-200 text-zinc-400 hover:text-brand-blue"
 					>
 						<ArrowLeft className="w-6 h-6 " />
 					</Link>

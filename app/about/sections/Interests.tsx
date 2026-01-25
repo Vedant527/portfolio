@@ -23,7 +23,7 @@ const Interests = () => {
           {interests.map((interest, index) => (
             <span
               key={index}
-              className="px-3 py-1.5 bg-zinc-800/50 border border-zinc-700/50 rounded-md text-zinc-300 text-sm hover:text-zinc-100 transition-colors"
+              className="px-3 py-1.5 bg-brand-dark/50 border border-white/10 rounded-md text-zinc-300 text-sm hover:text-white hover:border-brand-blue/50 hover:shadow-[0_0_10px_rgba(58,134,255,0.3)] transition-all duration-300 backdrop-blur-sm cursor-default"
             >
               {interest}
             </span>

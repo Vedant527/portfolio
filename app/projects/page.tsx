@@ -30,7 +30,7 @@ export default async function ProjectsPage() {
     );
 
   return (
-    <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 min-h-screen">
+    <div className="min-h-screen">
       <Navigation />
       <div className="container mx-auto px-4 pt-32 pb-16 max-w-5xl">
         <div className="flex flex-col gap-16">
@@ -44,12 +44,12 @@ export default async function ProjectsPage() {
             </p>
           </div>
 
-          <div className="w-full h-px bg-zinc-800" />
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div className="lg:col-span-2">
               <Link href={`/projects/${featured.slug}`} className="group block">
-                <article className="relative w-full p-8 border border-zinc-800 bg-zinc-900/50 rounded-lg hover:border-zinc-700 transition-colors">
+                <article className="relative w-full p-8 border border-white/10 bg-brand-dark/30 rounded-lg hover:border-brand-blue/50 hover:shadow-[0_0_20px_rgba(58,134,255,0.15)] transition-all duration-300 backdrop-blur-sm">
                   <div className="flex items-center justify-between gap-2 mb-4">
                     <div className="text-xs text-zinc-400 group-hover:text-zinc-200 transition-colors">
                       {featured.date ? (
@@ -70,7 +70,7 @@ export default async function ProjectsPage() {
                   <p className="mt-4 leading-relaxed text-zinc-400 group-hover:text-zinc-300 transition-colors">
                     {featured.description}
                   </p>
-                  <div className="mt-8 text-zinc-400 group-hover:text-zinc-200 underline decoration-zinc-600 underline-offset-4 transition-colors">
+                  <div className="mt-8 text-zinc-400 group-hover:text-brand-blue underline decoration-brand-blue/30 underline-offset-4 transition-colors">
                     Read more &rarr;
                   </div>
                 </article>
@@ -79,7 +79,7 @@ export default async function ProjectsPage() {
 
             {[top2, top3, ...sorted].map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
-                <article className="h-full p-6 border border-zinc-800 bg-zinc-900/50 rounded-lg hover:border-zinc-700 transition-colors flex flex-col">
+                <article className="h-full p-6 border border-white/10 bg-brand-dark/30 rounded-lg hover:border-brand-blue/50 hover:shadow-[0_0_15px_rgba(58,134,255,0.1)] transition-all duration-300 flex flex-col backdrop-blur-sm">
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <span className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
                       {project.date ? (

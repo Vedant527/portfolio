@@ -37,13 +37,13 @@ export default function Contact() {
 	}
 
 	return (
-		<div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 min-h-screen">
+		<div className="min-h-screen">
 			<Navigation />
 			<div className="container mx-auto px-4 pt-32 pb-16 max-w-3xl">
 				<div className="flex flex-col gap-16">
 
 					<div className="flex flex-col gap-6">
-						<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+						<h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] sm:text-4xl">
 							Contact
 						</h2>
 						<p className="text-zinc-400 leading-relaxed text-lg">
@@ -51,7 +51,7 @@ export default function Contact() {
 						</p>
 					</div>
 
-					<div className="h-px w-full bg-zinc-800" />
+					<div className="h-px w-full bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
 
 					<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 						{socials.map((s) => (
@@ -60,9 +60,9 @@ export default function Contact() {
 								href={s.href}
 								target="_blank"
 								onClick={() => s.address ? handleCopyToClipboard(s.address) : undefined}
-								className="group flex items-center gap-4 p-4 border border-zinc-800/50 rounded-lg hover:border-zinc-700 hover:bg-zinc-900/50 transition-all"
+								className="group flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-brand-blue/50 hover:bg-brand-dark/50 hover:shadow-[0_0_15px_rgba(58,134,255,0.1)] transition-all duration-300 backdrop-blur-sm"
 							>
-								<span className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-800/50 text-zinc-400 group-hover:text-zinc-200 group-hover:bg-zinc-800 transition-all border border-zinc-700/50">
+								<span className="flex items-center justify-center w-10 h-10 rounded-full bg-brand-dark/80 text-zinc-400 group-hover:text-brand-blue group-hover:bg-brand-dark transition-all border border-white/5">
 									{s.icon}
 								</span>
 								<div className="flex flex-col">

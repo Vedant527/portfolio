@@ -24,14 +24,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg duration-500 text-zinc-400 hover:text-zinc-200"
+              className="text-lg duration-500 text-zinc-400 hover:text-brand-blue hover:drop-shadow-[0_0_10px_rgba(58,134,255,0.5)]"
             >
               {item.name}
             </Link>
@@ -39,15 +39,15 @@ export default function Home() {
         </ul>
       </nav>
 
-      <div className="hidden w-screen h-px md:block bg-zinc-800" />
+      <div className="hidden w-screen h-px md:block bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <Particles className="absolute inset-0 -z-10 animate-fade-in opacity-30" quantity={100} />
 
-      <h1 className="z-10 py-8 text-4xl text-zinc-100 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap">
+      <h1 className="z-10 py-8 text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
         Vedant Bhat
       </h1>
 
-      <div className="hidden w-screen h-px md:block bg-zinc-800" />
+      <div className="hidden w-screen h-px md:block bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="my-16 text-center animate-fade-in">
         {isMobile ? (
