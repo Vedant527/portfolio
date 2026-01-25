@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
 import { Article } from "./article";
 import "../../global.css";
 
@@ -31,97 +30,81 @@ export default async function ProjectsPage() {
     );
 
   return (
-		<div className="relative pb-16">
+    <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 min-h-screen">
       <Navigation />
-      <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-        <div className="max-w-2xl mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            Projects
-          </h2>
-          <p className="mt-4 text-zinc-400">
-            Here are some of my favorite projects i've worked on over the last few years. A handful are internship projects.
-          </p>
-        </div>
-        <div className="hidden w-full h-px md:block bg-zinc-400" />
+      <div className="container mx-auto px-4 pt-32 pb-16 max-w-5xl">
+        <div className="flex flex-col gap-16">
 
-        <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-          <Card>
-            <Link href={`/projects/${featured.slug}`}>
-              <article className="relative w-full h-full p-4 md:p-8">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
-                        {Intl.DateTimeFormat(undefined, {
-                          dateStyle: "medium",
-                        }).format(new Date(featured.date))}
-                      </time>
-                    ) : (
-                      <span>SOON</span>
-                    )}
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              Projects
+            </h2>
+            <p className="mt-4 text-zinc-400 leading-relaxed text-lg">
+              Here are some of my favorite projects I've worked on over the last few years. A handful are internship projects.
+            </p>
+          </div>
+
+          <div className="w-full h-px bg-zinc-800" />
+
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="lg:col-span-2">
+              <Link href={`/projects/${featured.slug}`} className="group block">
+                <article className="relative w-full p-8 border border-zinc-800 bg-zinc-900/50 rounded-lg hover:border-zinc-700 transition-colors">
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="text-xs text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                      {featured.date ? (
+                        <time dateTime={new Date(featured.date).toISOString()}>
+                          {Intl.DateTimeFormat(undefined, {
+                            dateStyle: "medium",
+                          }).format(new Date(featured.date))}
+                        </time>
+                      ) : (
+                        <span>SOON</span>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                <h2
-                  id="featured-post"
-                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
-                >
-                  {featured.title}
-                </h2>
-                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  {featured.description}
-                </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
+                  <h2 className="text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display transition-colors">
+                    {featured.title}
+                  </h2>
+                  <p className="mt-4 leading-relaxed text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                    {featured.description}
                   </p>
-                </div>
-              </article>
-            </Link>
-          </Card>
+                  <div className="mt-8 text-zinc-400 group-hover:text-zinc-200 underline decoration-zinc-600 underline-offset-4 transition-colors">
+                    Read more &rarr;
+                  </div>
+                </article>
+              </Link>
+            </div>
 
-          {/* <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 "> */}
-          <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
-              <Card key={project.slug}>
-                <Article project={project} views={0} />
-              </Card>
+            {[top2, top3, ...sorted].map((project) => (
+              <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
+                <article className="h-full p-6 border border-zinc-800 bg-zinc-900/50 rounded-lg hover:border-zinc-700 transition-colors flex flex-col">
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
+                      {project.date ? (
+                        <time dateTime={new Date(project.date).toISOString()}>
+                          {Intl.DateTimeFormat(undefined, {
+                            dateStyle: "medium",
+                          }).format(new Date(project.date))}
+                        </time>
+                      ) : (
+                        <span>SOON</span>
+                      )}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-zinc-100 group-hover:text-white font-display mb-2 transition-colors">
+                    {project.title}
+                  </h2>
+                  <p className="text-zinc-400 line-clamp-3 leading-relaxed text-sm group-hover:text-zinc-300 transition-colors">
+                    {project.description}
+                  </p>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
-        <div className="hidden w-full h-px md:block bg-zinc-400" />
-
-        <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 0)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0} />
-                </Card>
-              ))}
-          </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 1)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0} />
-                </Card>
-              ))}
-          </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 2)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0}/>
-                </Card>
-              ))}
-          </div>
-        </div>
       </div>
-      <div id="progress-bar"></div>
     </div>
   );
 }

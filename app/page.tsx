@@ -24,47 +24,50 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative pb-16 flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg duration-500 text-slate-300 hover:text-white"
+              className="text-lg duration-500 text-zinc-400 hover:text-zinc-200"
             >
               {item.name}
             </Link>
           ))}
         </ul>
       </nav>
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
-      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+
+      <div className="hidden w-screen h-px md:block bg-zinc-800" />
+
+      <Particles className="absolute inset-0 -z-10 animate-fade-in opacity-30" quantity={100} />
+
+      <h1 className="z-10 py-8 text-4xl text-zinc-100 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap">
         Vedant Bhat
       </h1>
 
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+      <div className="hidden w-screen h-px md:block bg-zinc-800" />
+
       <div className="my-16 text-center animate-fade-in">
         {isMobile ? (
-          <>
-            <h2 className="text-lg text-slate-300">
-              MS in ML & Computing @ Georgia Tech
+          <div className="flex flex-col gap-2">
+            <h2 className="text-lg text-zinc-400">
+              mscs grad from gt
             </h2>
-            <h2 className="text-lg text-slate-300">
-              Software Dev Engineer
+            <h2 className="text-lg text-zinc-400">
+              swe @ aws
             </h2>
-          </>
+          </div>
         ) : (
-          <>
-            <h2 className="text-lg text-slate-300">
-              Masters student specializing in Machine Learning and Computing Systems @ Georgia Tech
+          <div className="flex flex-col gap-2">
+            <h2 className="text-lg text-zinc-400">
+              mscs grad from gt specializing in ml & computing systems
             </h2>
-            <h2 className="text-lg text-slate-300">
-              Software Development Engineer
+            <h2 className="text-lg text-zinc-400">
+              swe @ aws
             </h2>
-          </>
+          </div>
         )}
       </div>
     </div>
