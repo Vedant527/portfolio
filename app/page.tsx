@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Particles from "./components/particles";
+import ShootingStars from "./components/shooting-stars";
 
 const navigation = [
   { name: "about", href: "/about" },
@@ -42,10 +43,15 @@ export default function Home() {
       <div className="hidden w-screen h-px md:block bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <Particles className="absolute inset-0 animate-fade-in opacity-30" quantity={100} />
+      <ShootingStars />
 
-      <h1 className="z-10 py-8 text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-        Vedant Bhat
-      </h1>
+      <div className="relative z-10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[50%] bg-brand-blue/20 blur-[100px] pointer-events-none rounded-full animate-pulse opacity-50 mix-blend-screen" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[30%] bg-brand-purple/20 blur-[80px] pointer-events-none rounded-full animate-pulse delay-75 mix-blend-screen" />
+        <h1 className="relative py-8 text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+          Vedant Bhat
+        </h1>
+      </div>
 
       <div className="hidden w-screen h-px md:block bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 

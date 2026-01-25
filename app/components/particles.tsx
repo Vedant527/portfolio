@@ -33,10 +33,18 @@ export default function Particles({
 		}
 		initCanvas();
 		animate();
-		window.addEventListener("resize", initCanvas);
+
+		const handleResize = () => {
+			if (canvasContainerRef.current && canvasContainerRef.current.offsetWidth === canvasSize.current.w) {
+				return;
+			}
+			initCanvas();
+		};
+
+		window.addEventListener("resize", handleResize);
 
 		return () => {
-			window.removeEventListener("resize", initCanvas);
+			window.removeEventListener("resize", handleResize);
 		};
 	}, []);
 
