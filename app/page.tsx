@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
-      <nav className="my-16 animate-fade-in">
+      <nav className="my-16 animate-fade-in relative z-10">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link
