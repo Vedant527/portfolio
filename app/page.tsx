@@ -53,7 +53,7 @@ export default function Home() {
         {isMobile ? (
           <div className="flex flex-col gap-2">
             <h2 className="text-lg text-zinc-400">
-              mscs grad from gt
+              ms in ml @ gt
             </h2>
             <h2 className="text-lg text-zinc-400">
               swe @ aws
@@ -62,7 +62,7 @@ export default function Home() {
         ) : (
           <div className="flex flex-col gap-2">
             <h2 className="text-lg text-zinc-400">
-              mscs grad from gt specializing in ml & computing systems
+              ms in ml @ gt
             </h2>
             <h2 className="text-lg text-zinc-400">
               swe @ aws
