@@ -41,7 +41,7 @@ export default function Home() {
 
       <div className="hidden w-screen h-px md:block bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <Particles className="absolute inset-0 -z-10 animate-fade-in opacity-30" quantity={100} />
+      <Particles className="absolute inset-0 animate-fade-in opacity-30" quantity={100} />
 
       <h1 className="z-10 py-8 text-4xl text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 duration-1000 cursor-default animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
         Vedant Bhat
