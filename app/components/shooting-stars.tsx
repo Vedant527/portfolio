@@ -33,14 +33,17 @@ export default function ShootingStars() {
         const STAR_COUNT = 2;
         const SPAWN_PROBABILITY = 0.015;
 
-        // Hot Neon Palette
+        // Space Neon Palette (Weighted)
         const COLORS = [
-            "80, 255, 255", // Neon Cyan
-            "255, 80, 255", // Neon Magenta
-            "100, 255, 100", // Neon Lime
-            "255, 80, 20",   // Neon Orange/Red
-            "120, 120, 255", // Neon Indigo
-            "255, 255, 80",  // Neon Yellow
+            "120, 100, 255", // Neon Purple
+            "100, 50, 255",  // Deep Neon Purple
+            "60, 100, 255",  // Neon Dark Blue
+            "80, 180, 255",  // Neon Light Blue
+            "180, 80, 255",  // Neon Lavender
+            "140, 60, 255",  // Vivid Purple
+            "0, 255, 160",   // Neon Seafoam Green (Rare)
+            "0, 255, 160",   // Neon Seafoam Green (Rare)
+            "255, 120, 30",  // Neon Orange (Very Rare)
         ];
 
         const createStar = (): ShootingStar => {
