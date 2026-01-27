@@ -30,8 +30,8 @@ export default function ShootingStars() {
         canvas.height = height;
 
         const stars: ShootingStar[] = [];
-        const STAR_COUNT = 3;
-        const SPAWN_PROBABILITY = 0.02;
+        const STAR_COUNT = 2;
+        const SPAWN_PROBABILITY = 0.015;
 
         // Hot Neon Palette
         const COLORS = [
@@ -130,11 +130,11 @@ export default function ShootingStars() {
                 if (progress < 0.05) {
                     // Quick fade in
                     headOpacity = progress * 20;
-                } else if (progress > 0.9) {
-                    // Gentle fade out at the very end of lifecycle
-                    headOpacity = (1 - progress) * 10;
-                    scaleModifier = headOpacity; // Shrink as it fades
                 }
+                // REMOVED: Fade out logic
+
+                // Trail stays more opaque
+                let trailOpacity = headOpacity * 0.8;
 
                 if (headOpacity <= 0) {
                     stars.splice(i, 1);
@@ -150,7 +150,6 @@ export default function ShootingStars() {
 
                 // Trail GLOW
                 const trailLength = 200 * currentScale;
-                const trailOpacity = headOpacity * 0.8; // Link trail opacity to head
 
                 const gradient = ctx.createLinearGradient(0, 0, -trailLength, 0);
                 gradient.addColorStop(0, `rgba(${star.color}, ${trailOpacity})`);
