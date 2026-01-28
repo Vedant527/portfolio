@@ -1,9 +1,5 @@
-import Hero from './Hero';
-import About from './About';
-import Interests from './Interests';
+import { Timeline } from './Timeline';
 
 export {
-  Hero,
-  About,
-  Interests
+  Timeline
 };
