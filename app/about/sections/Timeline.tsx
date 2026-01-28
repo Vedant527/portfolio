@@ -109,9 +109,9 @@ const TimelineItem = ({ data, isLast }: { data: typeof timelineData[0]; isLast: 
             </div>
 
             {/* Content */}
-            <div className="flex flex-col gap-2 pb-12 relative w-full">
+            <div className="flex flex-col gap-2 pb-12 relative w-full pl-8 md:pl-0">
                 {/* Dot on timeline */}
-                <div className="absolute -left-[23px] md:-left-[33.5px] mt-2 h-2.5 w-2.5 rounded-full border-2 border-zinc-900 bg-zinc-500 group-hover:bg-brand-blue group-hover:scale-125 transition-all duration-300 z-10" />
+                <div className="absolute left-[1px] md:-left-[33.5px] mt-2 h-2.5 w-2.5 rounded-full border-2 border-zinc-900 bg-zinc-500 group-hover:bg-brand-blue group-hover:scale-125 transition-all duration-300 z-10" />
 
                 {/* Mobile Date */}
                 <span className="md:hidden font-mono text-sm text-zinc-500 mb-1">
