@@ -98,7 +98,7 @@ const TimelineItem = ({ data, isLast }: { data: typeof timelineData[0]; isLast: 
         <div className="relative flex gap-6 md:gap-12 group">
             {/* Vertical Line */}
             {!isLast && (
-                <div className="absolute left-[5.5px] top-3 bottom-[-48px] w-px bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-300 md:left-[179px]" />
+                <div className="absolute left-[5.5px] top-3 bottom-[-24px] md:bottom-[-48px] w-px bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-300 md:left-[179px]" />
             )}
 
             {/* Date / Left Column */}
@@ -109,7 +109,7 @@ const TimelineItem = ({ data, isLast }: { data: typeof timelineData[0]; isLast: 
             </div>
 
             {/* Content */}
-            <div className="flex flex-col gap-2 pb-12 relative w-full pl-8 md:pl-0">
+            <div className={`flex flex-col gap-2 relative w-full pl-8 md:pl-0 ${isLast ? "pb-0" : "pb-12"}`}>
                 {/* Dot on timeline */}
                 <div className="absolute left-[1px] md:-left-[33.5px] mt-2 h-2.5 w-2.5 rounded-full border-2 border-zinc-900 bg-zinc-500 group-hover:bg-brand-blue group-hover:scale-125 transition-all duration-300 z-10" />
 
@@ -161,9 +161,9 @@ const TimelineItem = ({ data, isLast }: { data: typeof timelineData[0]; isLast: 
 
 export const Timeline = () => {
     return (
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <section className="mx-auto max-w-3xl px-4 sm:px-6">
             <header className="mb-16">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-100 mb-4 font-display">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-100 mb-4">
                     About Me
                 </h1>
                 <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl">
@@ -191,7 +191,7 @@ export const Timeline = () => {
                 ))}
 
                 {/* Interests Section - Styled to fit timeline or just after */}
-                <div className="relative flex gap-6 md:gap-12 pt-4">
+                <div className="relative flex gap-6 md:gap-12 mt-12">
 
 
                     <div className="hidden md:block w-40 flex-shrink-0 text-right pt-2">
