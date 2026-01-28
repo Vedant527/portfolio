@@ -83,7 +83,7 @@ export default function ShootingStars() {
             }
 
             // Weighted speed: 10% really fast (15-25), 90% steady/majestic (2-7)
-            const speed = Math.random() < 0.1
+            const speed = Math.random() < 0.6
                 ? Math.random() * 10 + 15
                 : Math.random() * 5 + 2;
 
