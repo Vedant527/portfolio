@@ -48,6 +48,8 @@ export const Navigation: React.FC = () => {
 						</Link>
 						<Link
 							href="/resume"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="duration-200 text-zinc-400 hover:text-brand-blue drop-shadow-none hover:drop-shadow-[0_0_8px_rgba(58,134,255,0.5)]"
 						>
 							resume

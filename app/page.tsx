@@ -5,10 +5,11 @@ import React, { useEffect, useState } from "react";
 import Particles from "./components/particles";
 import ShootingStars from "./components/shooting-stars";
 
-const navigation = [
+const navigation: { name: string; href: string; target?: string }[] = [
   { name: "about", href: "/about" },
   { name: "projects", href: "/projects" },
   { name: "contact", href: "/contact" },
+  { name: "resume", href: "/resume", target: "_blank" },
 ];
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
+              target={item.target}
               className="text-lg duration-500 text-zinc-500 hover:text-brand-blue hover:drop-shadow-[0_0_12px_rgba(58,134,255,0.6)]"
             >
               {item.name}
