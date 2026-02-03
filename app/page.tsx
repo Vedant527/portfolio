@@ -34,16 +34,27 @@ export default function Home() {
       {/* Navigation */}
       <nav className="my-16 animate-fade-in relative z-10">
         <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              target={item.target}
-              className="text-lg duration-500 text-zinc-500 hover:text-brand-blue hover:drop-shadow-[0_0_12px_rgba(58,134,255,0.6)]"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) =>
+            item.target ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target={item.target}
+                rel="noopener noreferrer"
+                className="text-lg duration-500 text-zinc-500 hover:text-brand-blue hover:drop-shadow-[0_0_12px_rgba(58,134,255,0.6)]"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-lg duration-500 text-zinc-500 hover:text-brand-blue hover:drop-shadow-[0_0_12px_rgba(58,134,255,0.6)]"
+              >
+                {item.name}
+              </Link>
+            ),
+          )}
         </ul>
       </nav>
 

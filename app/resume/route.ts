@@ -10,7 +10,7 @@ export async function GET() {
         return new Response(new Uint8Array(fileBuffer), {
             headers: {
                 "Content-Type": "application/pdf",
-                "Content-Disposition": 'inline; filename="resume.pdf"',
+                "Content-Disposition": 'inline; filename="Vedant Bhat Resume - Experience Engineer @ AWS.pdf"',
             },
         });
     } catch (error) {
