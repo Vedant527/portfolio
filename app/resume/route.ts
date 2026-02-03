@@ -1,9 +1,10 @@
 import { readFile } from "fs/promises";
-import { join } from "path";
+import { resolve } from "path";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-    const filePath = join(process.cwd(), "public", "resume.pdf");
+    const filePath = resolve("./public/resume.pdf");
+
     try {
         const fileBuffer = await readFile(filePath);
         return new NextResponse(new Blob([fileBuffer as any]), {
