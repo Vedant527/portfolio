@@ -171,7 +171,7 @@ export const Timeline = () => {
                 </p>
                 <div className="mt-6 flex gap-4">
                     <a
-                        href="/Official Resume.pdf"
+                        href="/resume"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-100 text-zinc-900 hover:bg-white hover:scale-105 transition-all font-medium text-sm"

@@ -42,11 +42,11 @@ export default function Contact() {
 			<div className="container mx-auto px-4 pt-32 pb-16 max-w-3xl">
 				<div className="flex flex-col gap-16">
 
-					<div className="flex flex-col gap-6">
+					<div className="max-w-2xl">
 						<h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] sm:text-4xl">
 							Contact
 						</h2>
-						<p className="text-zinc-400 leading-relaxed text-lg">
+						<p className="mt-4 text-zinc-400 leading-relaxed text-lg">
 							Feel free to reach out if you want to collaborate on a project, have a question, or just want to say hi.
 						</p>
 					</div>

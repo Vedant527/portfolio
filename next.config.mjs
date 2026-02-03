@@ -6,6 +6,14 @@ const nextConfig = {
 	experimental: {
 		mdxRs: true,
 	},
+	async rewrites() {
+		return [
+			{
+				source: "/resume",
+				destination: "/resume.pdf",
+			},
+		];
+	},
 };
 
 export default withContentlayer(nextConfig);
