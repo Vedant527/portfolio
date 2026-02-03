@@ -1,13 +1,13 @@
 import { readFile } from "fs/promises";
-import { resolve } from "path";
+import { join } from "path";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-    const filePath = resolve("./public/resume.pdf");
+    const filePath = join(process.cwd(), "public", "resume.pdf");
 
     try {
         const fileBuffer = await readFile(filePath);
-        return new NextResponse(new Blob([fileBuffer as any]), {
+        return new Response(new Uint8Array(fileBuffer), {
             headers: {
                 "Content-Type": "application/pdf",
                 "Content-Disposition": 'inline; filename="resume.pdf"',
