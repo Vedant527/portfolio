@@ -4,6 +4,10 @@ import Link from "next/link";
 import { Navigation } from "../components/nav";
 import Particles from "../components/particles";
 
+const emailUser = "vbhat3443";
+const emailDomain = "gmail.com";
+const getEmail = () => `${emailUser}@${emailDomain}`;
+
 const socials = [
 	{
 		icon: <Linkedin size={20} />,
@@ -19,22 +23,24 @@ const socials = [
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:vedant.bhat527@gmail.com",
-		address: "vedant.bhat527@gmail.com",
+		href: "#",
+		address: getEmail,
 		label: "Mail",
-		handle: "vedant.bhat527@gmail",
+		handle: `${emailUser}[at]${emailDomain.replace(".", "[dot]")}`,
 	}
 ];
 
 
 
 export default function Contact() {
-	const handleCopyToClipboard = (email: string) => {
-		navigator.clipboard.writeText(email)
-			.catch((error) => {
-				console.error('Error copying to clipboard:', error);
-			});
-	}
+	const handleClick = (e: React.MouseEvent, s: typeof socials[number]) => {
+		if (s.address) {
+			e.preventDefault();
+			const email = s.address();
+			navigator.clipboard.writeText(email).catch(() => {});
+			window.location.href = `mailto:${email}`;
+		}
+	};
 
 	return (
 		<div className="min-h-screen">
@@ -59,7 +65,7 @@ export default function Contact() {
 								key={s.handle}
 								href={s.href}
 								target="_blank"
-								onClick={() => s.address ? handleCopyToClipboard(s.address) : undefined}
+								onClick={(e) => handleClick(e, s)}
 								className="group flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-brand-blue/50 hover:bg-brand-dark/50 hover:shadow-[0_0_15px_rgba(58,134,255,0.1)] transition-all duration-300 backdrop-blur-sm"
 							>
 								<span className="flex items-center justify-center w-10 h-10 rounded-full bg-brand-dark/80 text-zinc-400 group-hover:text-brand-blue group-hover:bg-brand-dark transition-all border border-white/5">
