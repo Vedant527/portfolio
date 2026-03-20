@@ -3,7 +3,7 @@
 
 Available at https://www.vedant.fyi
 
-DNS: Porkbun  
+DNS: Name  
 Hosting: Vercel
 
 Stack: Next.js, Tailwind.css, HTML
