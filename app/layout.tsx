@@ -7,16 +7,16 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: {
-    default: "vedantbhat.co",
-    template: "%s | vedantbhat.co",
+    default: "vedant.fyi",
+    template: "%s | vedant.fyi",
   },
   description: "Vedant Bhat's Portfolio",
   openGraph: {
-    title: "vedantbhat.co",
+    title: "vedant.fyi",
     description:
       "Vedant Bhat's Portfolio",
-    url: "https://vedantbhat.co",
-    siteName: "vedantbhat.co",
+    url: "https://vedant.fyi",
+    siteName: "vedant.fyi",
     locale: "en-US",
     type: "website",
   },

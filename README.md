@@ -1,7 +1,7 @@
 <div align="center">
-    <a href="https://vedantbhat.co"><h1 align="center">vedantbhat.co</h1></a>
+    <a href="https://vedant.fyi"><h1 align="center">vedant.fyi</h1></a>
 
-Available at https://www.vedantbhat.co
+Available at https://www.vedant.fyi
 
 DNS: Porkbun  
 Hosting: Vercel
